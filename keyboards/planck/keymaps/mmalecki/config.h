@@ -6,6 +6,8 @@
 
 #define MIDI_BASIC
 
+#define TAPPING_TERM 300
+
 #define ENCODER_RESOLUTION 4
 
 #define RGB_MATRIX_STARTUP_SPD 60
