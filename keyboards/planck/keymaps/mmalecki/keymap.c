@@ -30,17 +30,6 @@ enum planck_layers {
   _LAYER4,
 };
 
-enum tap_dances {
-  TD_LBRACKETS,
-  TD_RBRACKETS
-};
-
-qk_tap_dance_action_t tap_dance_actions[] = {
-  [TD_LBRACKETS] = ACTION_TAP_DANCE_DOUBLE(KC_LBRACKET, KC_LPRN),
-  [TD_RBRACKETS] = ACTION_TAP_DANCE_DOUBLE(KC_RBRACKET, KC_RPRN)
-};
-
-
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 

@@ -1,6 +1,11 @@
 #include QMK_KEYBOARD_H
 #include "mmalecki.h"
 
+qk_tap_dance_action_t tap_dance_actions[] = {
+  [TD_LBRACKETS] = ACTION_TAP_DANCE_DOUBLE(KC_LBRACKET, KC_LPRN),
+  [TD_RBRACKETS] = ACTION_TAP_DANCE_DOUBLE(KC_RBRACKET, KC_RPRN)
+};
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case TERRAFORM:
