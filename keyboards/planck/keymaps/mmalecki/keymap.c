@@ -107,13 +107,13 @@ void set_layer_color(int layer) {
 void rgb_matrix_indicators_user(void) {
   if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
-    case 1:
+    case _LOWER:
       set_layer_color(1);
       break;
-    case 2:
+    case _RAISE:
       set_layer_color(2);
       break;
-    case 4:
+    case _LAYER4:
       set_layer_color(4);
       break;
    default:
