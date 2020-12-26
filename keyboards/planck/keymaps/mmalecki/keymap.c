@@ -2,9 +2,14 @@
 #ifdef AUDIO_ENABLE
 #include "muse.h"
 #endif
+
 #include "eeprom.h"
 
 #include "mmalecki.h"
+
+#ifdef PROGRESS_ENABLE
+#include "progress.h"
+#endif
 
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_CUT LGUI(KC_X)
@@ -29,6 +34,8 @@ enum planck_layers {
   _ADJUST,
   _LAYER4,
 };
+
+
 
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
@@ -56,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_ADJUST] = LAYOUT_planck_grid(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RESET,          KC_TRANSPARENT, KC_TRANSPARENT, TOGGLE_LAYER_COLOR, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_PROGRESS_0,  KC_PROGRESS_1,  KC_PROGRESS_2,  KC_PROGRESS_3,  RESET,          KC_TRANSPARENT, KC_TRANSPARENT, TOGGLE_LAYER_COLOR, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_DELETE,      KC_TRANSPARENT, AU_ON,          AU_OFF,         AU_TOG,         KC_TRANSPARENT, KC_TRANSPARENT, RGB_TOG,        RGB_VAI,        RGB_VAD,        KC_TRANSPARENT, RESET,
     KC_TRANSPARENT, KC_TRANSPARENT, MU_ON,          MU_OFF,         MU_TOG,         KC_TRANSPARENT, KC_TRANSPARENT, RGB_MOD,        RGB_HUI,        RGB_HUD,        KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
@@ -131,7 +138,6 @@ uint8_t muse_offset = 70;
 uint16_t muse_tempo = 50;
 
 void matrix_scan_user(void) {
-#ifdef AUDIO_ENABLE
     if (muse_mode) {
         if (muse_counter == 0) {
             uint8_t muse_note = muse_offset + SCALE[muse_clock_pulse()];
@@ -143,7 +149,6 @@ void matrix_scan_user(void) {
         }
         muse_counter = (muse_counter + 1) % muse_tempo;
     }
-#endif
 }
 
 bool music_mask_user(uint16_t keycode) {
