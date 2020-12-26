@@ -6,7 +6,7 @@
 
 #define MIDI_BASIC
 
-#define TAPPING_TERM 300
+#define TAPPING_TERM 200
 
 #define ENCODER_RESOLUTION 4
 
