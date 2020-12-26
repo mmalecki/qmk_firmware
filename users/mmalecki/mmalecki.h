@@ -8,6 +8,12 @@ enum userspace_custom_keycodes {
   GIT = _SAFE_RANGE,
   GIT_COMMIT_MSG,
   TERRAFORM,
+#ifdef PROGRESS_ENABLE
+  KC_PROGRESS_0,
+  KC_PROGRESS_1,
+  KC_PROGRESS_2,
+  KC_PROGRESS_3,
+#endif
 };
 
 enum tap_dances {
