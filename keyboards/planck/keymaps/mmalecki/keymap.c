@@ -9,6 +9,11 @@
 
 #ifdef PROGRESS_ENABLE
 #include "progress.h"
+#else
+#define KC_PROGRESS_0 KC_TRANSPARENT
+#define KC_PROGRESS_1 KC_TRANSPARENT
+#define KC_PROGRESS_2 KC_TRANSPARENT
+#define KC_PROGRESS_3 KC_TRANSPARENT
 #endif
 
 enum planck_layers {
