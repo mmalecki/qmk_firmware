@@ -4,6 +4,8 @@
   #define _SAFE_RANGE SAFE_RANGE
 #endif
 
+#define MT_LSFT_SPC MT(MOD_LSFT, KC_SPACE)
+
 enum userspace_custom_keycodes {
   GIT = _SAFE_RANGE,
   GIT_COMMIT_MSG,
