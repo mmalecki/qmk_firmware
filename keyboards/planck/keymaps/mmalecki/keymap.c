@@ -21,7 +21,7 @@ enum planck_layers {
   _LOWER,
   _RAISE,
   _ADJUST,
-  _LAYER4,
+  _FN,
 };
 
 
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
 
-  [_LAYER4] = LAYOUT_planck_grid(
+  [_FN] = LAYOUT_planck_grid(
     KC_TRANSPARENT, KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_F6,          KC_F7,          KC_F8,          KC_F10,         KC_F11,         KC_F12,
     KC_CAPSLOCK,    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TERRAFORM,      GIT,            KC_ASTR,        KC_SLASH,       KC_HOME,        KC_PGUP,        KC_UP,          KC_LEFT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, GIT_COMMIT_MSG, KC_TRANSPARENT, KC_TRANSPARENT, KC_PLUS,        KC_MINUS,       KC_END,         KC_PGDOWN,      KC_DOWN,        KC_RIGHT,
@@ -109,7 +109,7 @@ void rgb_matrix_indicators_user(void) {
     case _RAISE:
       set_layer_color(2);
       break;
-    case _LAYER4:
+    case _FN:
       set_layer_color(4);
       break;
    default:
