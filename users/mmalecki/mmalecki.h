@@ -6,6 +6,10 @@
 
 #define MT_LSFT_SPC MT(MOD_LSFT, KC_SPACE)
 
+#define LOWER_SYMBOLS_R KC_GRAVE, KC_UNDS, KC_MINUS, KC_PLUS, KC_EQUAL, KC_PIPE
+#define NUMBERS_L KC_1, KC_2, KC_3, KC_4, KC_5
+#define NUMBERS_R KC_6, KC_7, KC_8, KC_9, KC_0
+
 enum userspace_custom_keycodes {
   GIT = _SAFE_RANGE,
   GIT_COMMIT_MSG,
