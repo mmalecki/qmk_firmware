@@ -135,7 +135,9 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
 }
 
 void keyboard_post_init_user(void) {
+#ifdef RGBLIGHT_ENABLE
   for (int i = 0; i < RGBLED_NUM; i++) {
     rgblight_setrgb_at(0x22, 0x8b, 0x22, i);
   }
+#endif
 }
