@@ -8,6 +8,3 @@ MOUSEKEY_ENABLE = no
 TAP_DANCE_ENABLE = yes
 RGB_MATRIX_ENABLE = yes
 RAW_ENABLE = yes
-
-# I make my own rules here
-PROGRESS_ENABLE = yes
