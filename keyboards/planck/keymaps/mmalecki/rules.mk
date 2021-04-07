@@ -1,6 +1,4 @@
-SRC += muse.c mmalecki.c progress.c
-# Set any rules.mk overrides for your specific keymap here.
-# See rules at https://docs.qmk.fm/#/config_options?id=the-rulesmk-file
+SRC += muse.c mmalecki.c qmk_rc.c
 CONSOLE_ENABLE = no
 AUDIO_ENABLE = yes
 COMMAND_ENABLE = no
