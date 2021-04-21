@@ -93,24 +93,6 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   return rotation;
 }
 
-void oled_render_layer_state(void) {
-    oled_write_P(PSTR("Layer: "), false);
-    switch (layer_state) {
-        case _BASE:
-            oled_write_ln_P(PSTR("Default"), false);
-            break;
-        case _LOWER:
-            oled_write_ln_P(PSTR("Lower"), false);
-            break;
-        case _RAISE:
-            oled_write_ln_P(PSTR("Raise"), false);
-            break;
-        case _ADJUST:
-            oled_write_ln_P(PSTR("Adjust"), false);
-            break;
-    }
-}
-
 void oled_render_logo(void) {
     static const char PROGMEM crkbd_logo[] = {
         0x80, 0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8a, 0x8b, 0x8c, 0x8d, 0x8e, 0x8f, 0x90, 0x91, 0x92, 0x93, 0x94,
@@ -121,11 +103,9 @@ void oled_render_logo(void) {
 }
 
 void oled_task_user(void) {
-    if (is_master) {
-        // oled_render_layer_state();
-    } else {
-        oled_render_logo();
-    }
+  if (!is_master) {
+    oled_render_logo();
+  }
 }
 #endif
 
