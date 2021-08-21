@@ -1,6 +1,6 @@
 SRC += muse.c mmalecki.c qmk_rc.c
 CONSOLE_ENABLE = no
-AUDIO_ENABLE = yes
+AUDIO_ENABLE = no
 COMMAND_ENABLE = no
 MOUSEKEY_ENABLE = no
 TAP_DANCE_ENABLE = yes
