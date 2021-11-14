@@ -51,9 +51,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = EXPAND( \
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KC_GRV,  NUMBER_SYMBOLS_L,                                                NUMBER_SYMBOLS_R,                            _______,
+      KC_GRV,  NUMBER_SYMBOLS_L,                                                 NUMBER_SYMBOLS_R,                            _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      LOWER_SYMBOLS_R,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      LOWER_SYMBOLS_R,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_LBRC,                      KC_RBRC, KC_RCBR, XXXXXXX, XXXXXXX, KC_BSLASH, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
