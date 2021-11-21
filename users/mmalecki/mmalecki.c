@@ -27,12 +27,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         SEND_STRING("git commit -m ''"SS_TAP(X_LEFT));
       }
       break;
-#ifdef PROGRESS_ENABLE
-      case KC_PROGRESS_0: switch_progress_channel(0); break;
-      case KC_PROGRESS_1: switch_progress_channel(1); break;
-      case KC_PROGRESS_2: switch_progress_channel(2); break;
-      case KC_PROGRESS_3: switch_progress_channel(3); break;
-#endif
   }
   return true;
 }
