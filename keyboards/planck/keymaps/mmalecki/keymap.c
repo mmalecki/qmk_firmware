@@ -33,28 +33,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV,  NUMBER_SYMBOLS_L,                            NUMBER_SYMBOLS_R,                            XXXXXXX,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LOWER_SYMBOLS_R,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_LBRC, KC_RBRC, KC_RCBR, XXXXXXX, XXXXXXX, KC_BSLASH, XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    _______, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, _______
   ),
 
   [_RAISE] = EXPAND( \
     KC_TILD, NUMBERS_L,                                   NUMBERS_R,                                   XXXXXXX,
     XXXXXXX, NUMBERS_L,                                   NUMBERS_R,                                   XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    KC_LALT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, _______
   ),
 
   [_ADJUST] = EXPAND( \
     F_L,                                                  F_R,
     XXXXXXX, RGB_L1,                             XXXXXXX, AU_R1,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     RESET,   RGB_L2,                             XXXXXXX, AU_R2,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    _______, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, _______
   ),
 
   [_FN] = EXPAND( \
     FN_L3,                                                FN_R3,
     FN_L2,                                                FN_R2,
     FN_L1,                                                FN_R1,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    _______, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, _______
   ),
 
 };
