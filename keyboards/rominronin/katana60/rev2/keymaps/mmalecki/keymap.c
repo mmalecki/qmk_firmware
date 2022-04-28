@@ -17,16 +17,7 @@
 
 #include "mmalecki.h"
 
-// MacOS based definitions.
-#define K_SPCFN LT(SYMB, KC_SPACE) // Tap for space, hold for symbols layer
-#define K_PRVWD LALT(KC_LEFT)      // Previous word
-#define K_NXTWD LALT(KC_RIGHT)     // Next word
-#define K_LSTRT LGUI(KC_LEFT)      // Start of line
-#define K_LEND  LGUI(KC_RIGHT)     // End of line
-#define UNDO    LGUI(KC_Z)         // UNDO
-#define CUT     LGUI(KC_X)         // CUT
-#define COPY    LGUI(KC_C)         // COPY
-#define PASTE   LGUI(KC_V)         // PASTE
+#define EXPAND(...) LAYOUT_1_c(__VA_ARGS__)
 
 enum layer_names {
   BASE,
@@ -34,18 +25,18 @@ enum layer_names {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [BASE] = LAYOUT_1_c(/* Base */
-    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,     KC_5,    KC_6,      LCTL(KC_Z), KC_7,    KC_8,    KC_9, KC_0,    KC_MINS, KC_EQL,  KC_GRAVE,
-    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,     KC_T,    KC_LBRC,   KC_RBRC,    KC_Y,    KC_U,    KC_I, KC_O,    KC_P,    KC_BSPC,
-    KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,     KC_G,    KC_BSLASH, KC_QUOTE,   KC_H,    KC_J,    KC_K, KC_L,    KC_SCLN, KC_ENTER,
-    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,    KC_PGUP,   KC_DEL,     KC_PGDN, KC_N,    KC_M, KC_COMM, KC_DOT,  KC_SLSH, MO(FN),
+  [BASE] = EXPAND( \
+    KC_ESC,  NUMBERS_L,                                    LCTL(KC_Z), NUMBERS_R,                         KC_MINS, KC_EQL,  KC_GRAVE,
+    KC_TAB,  QWERTY_L3,                                    KC_LBRC,   KC_RBRC,    QWERTY_R3,                                KC_BSPC,
+    KC_LCTL, QWERTY_L2,                                    KC_BSLASH, KC_QUOTE,   QWERTY_R2,                                KC_ENTER,
+    KC_LSFT, QWERTY_L1,                                    KC_PGUP,   KC_DEL,     KC_PGDN, QWERTY_R1,                       MO(FN),
     KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, MT(MOD_LSFT, KC_SPACE), KC_ENT, KC_SPACE, KC_RALT, KC_RGUI, MO(FN)
   ),
-  [FN] = LAYOUT_1_c(
-    RESET,   _______, _______, _______, _______,  _______, _______,    _______,   _______, _______, _______, _______, _______,  _______, _______,
-    _______, _______, _______, _______, _______,  _______, _______,    _______,   _______, _______, _______, _______, KC_UP,    _______,
-    _______, _______, _______, _______, TERRAFORM, GIT,    _______,    _______,   _______, _______, _______, KC_LEFT, KC_RIGHT, _______,
-    _______, _______, _______, GIT_COMMIT_MSG, _______, _______, _______, _______,  _______, _______, _______, _______, _______,  KC_DOWN, _______,
+  [FN] = EXPAND( \
+    RESET,   F_L,                                                     _______,    F_R,                                      _______,
+    FN_L3,                                                 _______,   _______,    FN_R3,
+    FN_L2,                                                 _______,   _______,    FN_R2,
+    FN_L1,                                                 _______,   _______,    _______, FN_R1,
     _______, _______, _______, _______, _______,  _______, _______,    _______,   _______, _______
   ),
 };

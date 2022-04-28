@@ -5,6 +5,8 @@
 #include "progress.h"
 #endif
 
+#include <process_tap_dance.h>
+
 qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_LBRACKETS] = ACTION_TAP_DANCE_DOUBLE(KC_LBRACKET, KC_LPRN),
   [TD_RBRACKETS] = ACTION_TAP_DANCE_DOUBLE(KC_RBRACKET, KC_RPRN)
